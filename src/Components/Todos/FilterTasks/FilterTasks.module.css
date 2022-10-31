@@ -1,0 +1,15 @@
+.sort{
+	display: flex;
+	gap: 5px;
+	margin-bottom: 5px;
+}
+.sort > button{
+	background-color: transparent;
+	border: 1px solid rgb(87, 132, 255);
+	color: rgb(87, 132, 255);
+}
+
+.active.active{
+	border: 1px solid rgb(176, 29, 235);
+	color: rgb(176, 29, 235);
+}

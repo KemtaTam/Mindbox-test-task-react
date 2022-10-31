@@ -10,7 +10,9 @@ export const AddTodoForm = () => {
 
 	const onClickHandler = (e: any) => {
 		e.preventDefault()
-		if (todoText.trim() !== '') addTask({ id: Date.now(), text: todoText, status: 'todo' })
+		if (todoText.trim() !== '') {
+			addTask({ id: Date.now(), text: todoText, status: 'todo' })
+		}
 		setTodoText('')
 	}
 	const onKeyDownHandler = (e: KeyboardEvent<HTMLDivElement>) => {
