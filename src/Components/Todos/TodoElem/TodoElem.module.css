@@ -1,0 +1,72 @@
+.todo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid gray;
+	padding: 5px 0;
+}
+.todo:first-of-type{
+	border-top: 1px solid gray;
+}
+
+.editing_elems{
+	display: flex;
+	gap: 10px;
+}
+
+.bStatus{
+	margin-right: 10px;
+	width: 85px;
+	text-align: center;
+	background-color: transparent;
+	border-radius: 5px;
+}
+.bStatus::first-letter{
+	text-transform: capitalize;
+}
+
+.bStatus[data-status="todo"] {
+	border: 1px solid rgb(65, 65, 65);;
+	color: rgb(65, 65, 65);
+}
+.bStatus[data-status="pending"] {
+	border: 1px solid #F28526FF;
+	color: #F28526FF
+}
+.bStatus[data-status="complete"] {
+	border: 1px solid #00A45DFF;
+	color: #00A45DFF;
+}
+
+.text{
+	overflow-x: auto;
+	width: 95%;
+}
+.text[data-status="pending"] {
+	font-style: italic;
+}
+.text[data-status="complete"] {
+	text-decoration: line-through;
+}
+
+.input{
+	width: 95%;
+}
+
+.bRemove{
+	background-color: transparent;
+	border: none;
+}
+.bEdit{
+	background-color: transparent;
+	border: none;
+}
+.bRemove, .bEdit{
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+
+.imgBin, .imgPen{
+	width: 20px;
+}
