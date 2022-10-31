@@ -6,7 +6,7 @@ export type TaskType = {
 	text: string
 	status: StatusType
 }
-interface TodosState {
+export interface TodosState {
 	tasks: TaskType[]
 	filteredTasks: TaskType[]
 }
