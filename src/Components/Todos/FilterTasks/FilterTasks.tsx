@@ -4,6 +4,7 @@ import { useActions } from '../../../hooks/actions'
 import { StatusType } from '../../../redux/todos.slice'
 
 import { SearchTasks } from './SearchTasks/SearchTasks'
+import { SortTasks } from './SortTasks/SortTasks'
 
 import s from './FilterTasks.module.css'
 
@@ -30,6 +31,7 @@ export const FilterTasks = () => {
 			<button className={active === 'complete' ? s.active : ''} onClick={() => filterHandler('complete')}>
 				Complete
 			</button>
+			<SortTasks />
 			<SearchTasks />
 		</div>
 	)

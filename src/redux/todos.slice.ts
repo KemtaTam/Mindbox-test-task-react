@@ -21,6 +21,7 @@ const setFilteredAndLocalStorage = (state: Draft<TodosState>) => {
 	state.filteredTasks = state.tasks
 	localStorage.setItem('tasks', JSON.stringify(state.tasks))
 }
+
 const initialState: TodosState = {
 	tasks: JSON.parse(localStorage.getItem('tasks') ?? initialWithoutLocal),
 	filteredTasks: JSON.parse(localStorage.getItem('tasks') ?? initialWithoutLocal)
@@ -73,6 +74,21 @@ export const todosSlice = createSlice({
 		},
 		searchTasks(state, action: PayloadAction<string>) {
 			state.filteredTasks = state.tasks.filter((task) => task.text.toLowerCase().includes(action.payload))
+		},
+		sortTasks(state, action: PayloadAction<{ sortBy: string; option: string }>) {
+			if (action.payload.option === 'a-z') {
+				state.filteredTasks.sort((a, b) =>
+					a[action.payload.sortBy as keyof TaskType]
+						.toString()
+						.localeCompare(b[action.payload.sortBy as keyof TaskType].toString())
+				)
+			} else if (action.payload.option === 'z-a') {
+				state.filteredTasks.sort((a, b) =>
+					b[action.payload.sortBy as keyof TaskType]
+						.toString()
+						.localeCompare(a[action.payload.sortBy as keyof TaskType].toString())
+				)
+			}
 		}
 	}
 })
