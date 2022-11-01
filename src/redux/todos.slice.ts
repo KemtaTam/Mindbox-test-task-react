@@ -70,6 +70,9 @@ export const todosSlice = createSlice({
 			} else {
 				state.filteredTasks = state.tasks.filter((task) => task.status === action.payload)
 			}
+		},
+		searchTasks(state, action: PayloadAction<string>) {
+			state.filteredTasks = state.tasks.filter((task) => task.text.toLowerCase().includes(action.payload))
 		}
 	}
 })

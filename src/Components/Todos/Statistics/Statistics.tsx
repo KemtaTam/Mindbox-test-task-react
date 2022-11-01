@@ -13,7 +13,7 @@ export const Statistics = () => {
 			<div className={s.wrapper} style={{ width: completePercent.toString() + '%' }}></div>
 			<div className={s.text_wrapper}>
 				<div className={s.text}>
-					Завершено {completeAmount}/{tasks.length}
+					Completed {completeAmount}/{tasks.length}
 				</div>
 			</div>
 		</div>

@@ -3,11 +3,13 @@ import { useState } from 'react'
 import { useActions } from '../../../hooks/actions'
 import { StatusType } from '../../../redux/todos.slice'
 
+import { SearchTasks } from './SearchTasks/SearchTasks'
+
 import s from './FilterTasks.module.css'
 
 export const FilterTasks = () => {
-	const { filterTasks } = useActions()
 	const [active, setActive] = useState('all')
+	const { filterTasks } = useActions()
 
 	const filterHandler = (type: StatusType | 'all') => {
 		filterTasks(type)
@@ -28,6 +30,7 @@ export const FilterTasks = () => {
 			<button className={active === 'complete' ? s.active : ''} onClick={() => filterHandler('complete')}>
 				Complete
 			</button>
+			<SearchTasks />
 		</div>
 	)
 }

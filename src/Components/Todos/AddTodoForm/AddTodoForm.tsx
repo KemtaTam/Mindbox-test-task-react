@@ -29,6 +29,7 @@ export const AddTodoForm = () => {
 				value={todoText}
 				onChange={(e) => setTodoText(e.target.value)}
 				onKeyDown={onKeyDownHandler}
+				placeholder="Add task..."
 			/>
 			<button className={s.button} onClick={onClickHandler}>
 				Add
