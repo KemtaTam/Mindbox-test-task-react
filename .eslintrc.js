@@ -16,11 +16,12 @@ module.exports = {
 	plugins: ['react', 'prettier', 'simple-import-sort'],
 	rules: {
 		'react/react-in-jsx-scope': 0,
-		'@typescript-eslint/no-unused-vars': 'warn',
-		'no-console': 'warn',
+		'react/display-name': 0,
 		'@typescript-eslint/explicit-function-return-type': 0,
 		'@typescript-eslint/consistent-type-definitions': 0,
-		'react/display-name': 0,
+		'@typescript-eslint/no-unused-vars': 'warn',
+		'no-console': 'warn',
+		'no-debugger': 'warn',
 
 		'import/order': 0,
 		'simple-import-sort/exports': 1,

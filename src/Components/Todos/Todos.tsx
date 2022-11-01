@@ -2,6 +2,7 @@ import { useAppSelector } from '../../hooks/redux'
 
 import { AddTodoForm } from './AddTodoForm/AddTodoForm'
 import { FilterTasks } from './FilterTasks/FilterTasks'
+import { Statistics } from './Statistics/Statistics'
 import { TodoElem } from './TodoElem/TodoElem'
 
 import s from './Todos.module.css'
@@ -19,6 +20,7 @@ export const Todos = () => {
 			<AddTodoForm />
 			<FilterTasks />
 			<div className={s.tasksList}>{tasksList}</div>
+			<Statistics />
 		</div>
 	)
 }
