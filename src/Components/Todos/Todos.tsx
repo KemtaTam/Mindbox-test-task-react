@@ -15,12 +15,14 @@ export const Todos = () => {
 	))
 
 	return (
-		<div className={s.todos}>
-			<h1 className={s.h1}>TODOS</h1>
-			<AddTodoForm />
-			<FilterTasks />
-			<div className={s.tasksList}>{tasksList}</div>
-			<Statistics />
+		<div className={s.container}>
+			<div className={s.todos}>
+				<h1 className={s.h1}>TODOS</h1>
+				<AddTodoForm />
+				<FilterTasks />
+				<div className={s.tasksList}>{tasksList}</div>
+				<Statistics />
+			</div>
 		</div>
 	)
 }

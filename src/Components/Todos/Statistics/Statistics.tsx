@@ -7,7 +7,6 @@ export const Statistics = () => {
 
 	const completeAmount = tasks.filter((task) => task.status === 'complete').length
 	const completePercent = (completeAmount / tasks.length) * 100
-	debugger
 
 	return (
 		<div className={s.statistics}>
