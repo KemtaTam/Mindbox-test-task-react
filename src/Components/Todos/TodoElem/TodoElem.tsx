@@ -1,4 +1,4 @@
-import { KeyboardEvent, useState } from 'react'
+import { KeyboardEvent, memo,useState } from 'react'
 
 import bin from '../../../assets/images/bin.svg';
 import pen from '../../../assets/images/pen.svg';
@@ -10,7 +10,7 @@ import s from './TodoElem.module.css'
 type PropsType = TaskType & {
 	index: number
 }
-export const TodoElem = ({ id, index, text, status }: PropsType) => {
+export const TodoElem = memo(({ id, index, text, status }: PropsType) => {
 	const [editMode, setEditMode] = useState(false)
 	const [inputValue, setInputValue] = useState(text)
 
@@ -22,7 +22,7 @@ export const TodoElem = ({ id, index, text, status }: PropsType) => {
 			setEditMode(!editMode)
 		}
 	}
-
+	
 	return (
 		<div className={s.todo}>
 			<div className={s.text} data-status={status}>
@@ -53,4 +53,4 @@ export const TodoElem = ({ id, index, text, status }: PropsType) => {
 			</div>
 		</div>
 	)
-}
+})
