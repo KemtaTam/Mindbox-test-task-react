@@ -40,7 +40,7 @@
 
 .text{
 	overflow-x: auto;
-	width: 95%;
+	width: 75%;
 }
 .text[data-status="pending"] {
 	font-style: italic;
@@ -50,7 +50,7 @@
 }
 
 .input{
-	width: 95%;
+	width: 100%;
 }
 
 .bRemove{
