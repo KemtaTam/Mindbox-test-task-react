@@ -1,4 +1,4 @@
-Todo list: https://kemtatam.github.io/Mindbox-test-task-react
+Todo list: https://kemtatam.github.io/Todo-list-react
 
 ## Возможности:
 1. Добавить заметку
