@@ -1,8 +1,8 @@
 {
-	"name": "mindbox-test-task",
+	"name": "todo-list-task",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://kemtatam.github.io/Mindbox-test-task-react",
+	"homepage": "https://kemtatam.github.io/Todo-list-react",
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.8.6",
 		"@testing-library/jest-dom": "^5.16.5",
